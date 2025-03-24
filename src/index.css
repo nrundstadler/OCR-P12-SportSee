@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: oklch(0.628 0.2577 29.23);
+  --color-primary-dark: oklch(0.581 0.238 29.23);
+
+  --font-family-base: "Roboto", sans-serif;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-family-base);
+  }
+
+  a {
+    color: var(--color-primary-dark);
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+}
