@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 
 import App from "./App";
 import Homepage from "./pages/Homepage/Homepage";
+import Profile from "./pages/Profile/Profile";
 import Error from "./components/Error";
 
 export const router = createBrowserRouter([
@@ -12,6 +13,14 @@ export const router = createBrowserRouter([
       {
         path: "/",
         element: <Homepage />,
+      },
+      {
+        path: "/profile/:id?",
+        element: <Profile isMockData={false} />,
+      },
+      {
+        path: "/profile-mocked/:id?",
+        element: <Profile isMockData={true} />,
       },
       {
         path: "*", // Catch-all
