@@ -11,25 +11,25 @@ function Homepage() {
       <h1 className="text-2xl">Choix de l'utilisateur :</h1>
       <Link
         className="bg-primary hover:bg-primary-dark rounded-full px-4 py-2 font-bold text-white hover:no-underline"
-        to="/profile/12"
+        to="/profile-mocked/12"
       >
         Profil n° 12 (données mockées)
       </Link>
       <Link
         className="bg-primary hover:bg-primary-dark rounded-full px-4 py-2 font-bold text-white hover:no-underline"
-        to="/profile/18"
+        to="/profile-mocked/18"
       >
         Profil n° 18 (données mockées)
       </Link>
       <Link
         className="bg-primary hover:bg-primary-dark rounded-full px-4 py-2 font-bold text-white hover:no-underline"
-        to="/profile-mocked/12"
+        to="/profile/12"
       >
         Profil n° 12 (API)
       </Link>
       <Link
         className="bg-primary hover:bg-primary-dark rounded-full px-4 py-2 font-bold text-white hover:no-underline"
-        to="/profile-mocked/18"
+        to="/profile/18"
       >
         Profil n° 18 (API)
       </Link>

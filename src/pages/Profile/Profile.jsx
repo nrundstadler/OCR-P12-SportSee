@@ -1,9 +1,11 @@
 import { useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 
-function Profile() {
+function Profile({ isMockData }) {
   const { id } = useParams();
   const navigate = useNavigate();
+
+  console.log("isMockData", isMockData);
 
   useEffect(() => {
     if (!id) {
