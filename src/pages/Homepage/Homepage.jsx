@@ -1,10 +1,8 @@
-import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import usePageTitle from "../../Hooks/usePageTitle";
 
 function Homepage() {
-  useEffect(() => {
-    document.title = "Accueil - SportSee";
-  }, []);
+  usePageTitle("Accueil - SportSee");
 
   return (
     <div className="flex flex-col items-center gap-10">

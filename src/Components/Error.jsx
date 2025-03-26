@@ -1,10 +1,8 @@
-import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import usePageTitle from "../Hooks/usePageTitle";
 
 function Error({ title = "Erreur", subtitle = "Une erreur s'est produite." }) {
-  useEffect(() => {
-    document.title = title + " - SportSee";
-  }, [title]);
+  usePageTitle(`${title} - SportSee`);
 
   return (
     <section className="flex flex-col items-center gap-14">

@@ -16,11 +16,11 @@ export const router = createBrowserRouter([
       },
       {
         path: "/profile/:id?",
-        element: <Profile isMockData={false} />,
+        element: <Profile useMockData={false} />,
       },
       {
         path: "/profile-mocked/:id?",
-        element: <Profile isMockData={true} />,
+        element: <Profile useMockData={true} />,
       },
       {
         path: "*", // Catch-all
