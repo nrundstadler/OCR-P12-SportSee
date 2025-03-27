@@ -16,7 +16,7 @@ function standardizeUserData(rawData) {
  * @param {Object} data - The raw data object containing userData, activityData,...
  * @returns {Object} - Data with consistent structure
  */
-export function standardizeAllData(data) {
+function standardizeData(data) {
   return {
     userData: standardizeUserData(data.userData.data || data.userData),
     activityData: data.activityData.data || data.activityData,
@@ -25,4 +25,4 @@ export function standardizeAllData(data) {
   };
 }
 
-export default standardizeAllData;
+export default standardizeData;
