@@ -9,6 +9,13 @@ import standardizeAllData from "../data/standardizeData";
 
 const BASE_URL_API = "http://localhost:3000/user";
 
+/**
+ * Fetches user data from the API
+ * @async
+ * @param {number} userId - The ID of the user
+ * @returns {Promise<Object>} Object containing user data
+ * @throws {Error} If the fetch fails or if data is missing
+ */
 const fetchDataApi = async (userId) => {
   const endpoints = [
     `${BASE_URL_API}/${userId}`,
@@ -20,8 +27,7 @@ const fetchDataApi = async (userId) => {
   const responses = await Promise.all(endpoints.map((url) => fetch(url)));
 
   // *** Simulate a delay for testing ***
-  //await new Promise((resolve) => setTimeout(resolve, 1900));
-
+  // await new Promise((resolve) => setTimeout(resolve, 1900));
   for (const response of responses) {
     if (!response.ok) {
       throw new Error("Failed to fetch data.");
@@ -50,6 +56,12 @@ const fetchDataApi = async (userId) => {
   };
 };
 
+/**
+ * Retrieves mock data (from a js file) for a user
+ * @param {number} userId
+ * @returns {Object} Object containing mock user data
+ * @throws {Error} If mock data is not found for the given user ID
+ */
 const getMockData = (userId) => {
   const userData = USER_MAIN_DATA.find((user) => user.id === userId);
   const activityData = USER_ACTIVITY.find(
@@ -69,6 +81,15 @@ const getMockData = (userId) => {
   return { userData, activityData, averageSessionData, performanceData };
 };
 
+/**
+ * Custom hook to retrieve and manage user data
+ * @param {number} userId - The ID of the user
+ * @param {boolean} useMockData - Flag to determine whether to use mock data instead of API
+ * @returns {Object} An object containing:
+ *   - isLoading {boolean} - Indicates if data is being fetched
+ *   - hasError {boolean} - Indicates if an error occurred
+ *   - data {Object|null} - The normalized user data or null if not loaded
+ */
 export function useGetData(userId, useMockData) {
   const [data, setData] = useState(null);
   const [isLoading, setLoading] = useState(true);

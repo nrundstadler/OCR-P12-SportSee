@@ -3,6 +3,12 @@ import { Outlet } from "react-router-dom";
 import Sidebar from "./Components/Sidebar";
 import Header from "./Components/Header";
 
+/**
+ * Root component that provides the main layout structure of the application.
+ * Renders the header, sidebar and main content using React Router's Outlet.
+ *
+ * @returns {JSX.Element} The application's root layout structure
+ */
 function App() {
   return (
     <>

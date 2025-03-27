@@ -1,7 +1,7 @@
 /**
- * Standardize user data by ensuring consistent property names.
+ * Handles 'todayScore' and 'score' properties to ensure consistent naming
  * @param {Object} rawData - The raw user data.
- * @returns {Object} - The standardized user data.
+ * @returns {Object} - Data with standardized property names
  */
 function standardizeUserData(rawData) {
   return {
@@ -11,9 +11,10 @@ function standardizeUserData(rawData) {
 }
 
 /**
- * Standardize all fetched data.
- * @param {Object} data - The raw data object containing userData, activityData, etc.
- * @returns {Object} - The standardized data object.
+ * Standardizes all API data by handling direct or nested data structures
+ * (where data might be under a 'data' property)
+ * @param {Object} data - The raw data object containing userData, activityData,...
+ * @returns {Object} - Data with consistent structure
  */
 export function standardizeAllData(data) {
   return {

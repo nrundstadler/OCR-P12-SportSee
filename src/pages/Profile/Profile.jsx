@@ -14,10 +14,10 @@ function Profile({ useMockData }) {
   // Fetch the User data
   const { isLoading, hasError, data } = useGetData(userId, useMockData);
 
-  // Use the custom hook to manage delayed loading
+  // Control the loading component display based on loading duration
   const showLoading = useDelayedLoading(isLoading, 400, 800);
 
-  // Handle loading state (if loading takes longer than 400ms, show the loading component for at least 800ms)
+  // Show the loading component
   if (showLoading) {
     return <Loading />;
   }
@@ -34,7 +34,7 @@ function Profile({ useMockData }) {
     );
   }
 
-  // Handle successful data fetch
+  // Display profile if data is loaded without errors
   if (!isLoading && !hasError) {
     return (
       <>
