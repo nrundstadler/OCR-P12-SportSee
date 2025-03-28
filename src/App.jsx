@@ -15,7 +15,7 @@ function App() {
       <Header />
       <div className="flex">
         <Sidebar />
-        <main className="mt-23 ml-29 flex-1 px-[109px] py-[62px]">
+        <main className="mt-22 ml-29 flex-1 px-8 py-8 xl:px-[109px] xl:py-[62px]">
           <Outlet />
         </main>
       </div>
