@@ -25,7 +25,7 @@ export const fetchDataApi = async (userId) => {
   const responses = await Promise.all(endpoints.map((url) => fetch(url)));
 
   // *** Simulate a delay for testing ***
-  // await new Promise((resolve) => setTimeout(resolve, 1900));
+  //await new Promise((resolve) => setTimeout(resolve, 1900));
   for (const response of responses) {
     if (!response.ok) {
       throw new Error("Failed to fetch data.");
@@ -42,7 +42,7 @@ export const fetchDataApi = async (userId) => {
     !performanceData.data
   ) {
     throw new Error(
-      "One or more API responses are missing the 'data' property.",
+      "One or more API responses are missing the 'data' property .",
     );
   }
 

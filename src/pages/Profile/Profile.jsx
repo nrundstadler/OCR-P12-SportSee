@@ -5,6 +5,7 @@ import usePageTitle from "../../Hooks/usePageTitle";
 import Error from "../../components/Error";
 import Loading from "../../components/Loading";
 import DailyActivityChart from "../../Components/Charts/DailyActivityChart";
+import NutritionCard from "../../Components/NutritionCard";
 
 function Profile({ useMockData }) {
   usePageTitle("Profil - SportSee");
@@ -52,7 +53,7 @@ function Profile({ useMockData }) {
         </header>
         <section className="mt-12 flex flex-col gap-8 xl:flex-row">
           <div className="grid flex-1 grid-cols-3 grid-rows-[300px_263px] gap-7">
-            <div className="col-span-3 bg-neutral-100">
+            <div className="col-span-3 bg-neutral-50">
               <DailyActivityChart data={data.activityData.sessions} />
             </div>
             <div className="bg-amber-300">Graph 2</div>
@@ -60,10 +61,22 @@ function Profile({ useMockData }) {
             <div className="bg-amber-500">Graph 4</div>
           </div>
           <div className="flex justify-between gap-7 xl:w-[258px] xl:flex-col">
-            <div className="h-[124px] flex-1 rounded-sm bg-neutral-100 xl:flex-initial"></div>
-            <div className="h-[124px] flex-1 rounded-sm bg-neutral-100 xl:flex-initial"></div>
-            <div className="h-[124px] flex-1 rounded-sm bg-neutral-100 xl:flex-initial"></div>
-            <div className="h-[124px] flex-1 rounded-sm bg-neutral-100 xl:flex-initial"></div>
+            <NutritionCard
+              type="calorieCount"
+              value={data.userData.keyData.calorieCount}
+            />
+            <NutritionCard
+              type="proteinCount"
+              value={data.userData.keyData.proteinCount}
+            />
+            <NutritionCard
+              type="carbohydrateCount"
+              value={data.userData.keyData.carbohydrateCount}
+            />
+            <NutritionCard
+              type="lipidCount"
+              value={data.userData.keyData.lipidCount}
+            />
           </div>
         </section>
       </>
