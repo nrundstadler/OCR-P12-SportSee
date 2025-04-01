@@ -39,7 +39,7 @@ const NutritionCard = ({ type, value }) => {
   return (
     <div className="flex h-[124px] flex-1 flex-row items-center gap-6 rounded-sm bg-neutral-50 pl-6 xl:flex-initial">
       <div
-        class="flex h-15 w-15 items-center justify-center rounded-md bg-white"
+        className="flex h-15 w-15 items-center justify-center rounded-md bg-white"
         style={{
           backgroundColor: info.bgColorIcon,
         }}
@@ -52,12 +52,12 @@ const NutritionCard = ({ type, value }) => {
         />
       </div>
       <div>
-        <span class="text-xl font-bold text-[#282D30]">
+        <span className="text-xl font-bold text-[#282D30]">
           {value.toLocaleString("en-US")}
           {info.unit}
         </span>
         <br />
-        <span class="font-medium text-[#9B9EAC]">{info.labelFR}</span>
+        <span className="font-medium text-[#9B9EAC]">{info.labelFR}</span>
       </div>
     </div>
   );

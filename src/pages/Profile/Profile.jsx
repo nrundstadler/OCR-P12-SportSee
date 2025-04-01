@@ -5,6 +5,7 @@ import usePageTitle from "../../Hooks/usePageTitle";
 import Error from "../../components/Error";
 import Loading from "../../components/Loading";
 import DailyActivityChart from "../../Components/Charts/DailyActivityChart";
+import AverageSessionsChart from "../../Components/Charts/AverageSessionsChart";
 import NutritionCard from "../../Components/NutritionCard";
 
 function Profile({ useMockData }) {
@@ -53,10 +54,12 @@ function Profile({ useMockData }) {
         </header>
         <section className="mt-12 flex flex-col gap-8 xl:flex-row">
           <div className="grid flex-1 grid-cols-3 grid-rows-[300px_263px] gap-7">
-            <div className="col-span-3 bg-neutral-50">
+            <div className="col-span-3">
               <DailyActivityChart data={data.activityData.sessions} />
             </div>
-            <div className="bg-amber-300">Graph 2</div>
+            <div>
+              <AverageSessionsChart data={data.averageSessionData.sessions} />
+            </div>
             <div className="bg-amber-400">Graph 3</div>
             <div className="bg-amber-500">Graph 4</div>
           </div>

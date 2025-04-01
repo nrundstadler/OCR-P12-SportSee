@@ -11,7 +11,7 @@ import {
 
 function DailyActivityChart({ data }) {
   return (
-    <div className="flex h-full w-full items-end text-sm font-medium">
+    <div className="flex h-full w-full items-end rounded-md bg-neutral-50 text-sm font-medium">
       <ResponsiveContainer>
         <BarChart
           data={data}
