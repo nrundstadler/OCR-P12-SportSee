@@ -5,8 +5,9 @@
  */
 function standardizeUserData(rawData) {
   return {
-    todayScore: rawData.todayScore ?? rawData.score, // Standardize the score property
     ...rawData,
+    score: rawData.todayScore ?? rawData.score, // Standardize the score property
+    todayScore: undefined, // Remove the property to avoid confusion
   };
 }
 
@@ -17,8 +18,8 @@ function standardizeUserData(rawData) {
  */
 function standardizeData(data) {
   return {
-    userData: standardizeUserData(data.userData),
     ...data,
+    userData: standardizeUserData(data.userData),
   };
 }
 

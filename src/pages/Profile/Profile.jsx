@@ -8,6 +8,7 @@ import DailyActivityChart from "../../Components/Charts/DailyActivityChart";
 import AverageSessionsChart from "../../Components/Charts/AverageSessionsChart";
 import NutritionCard from "../../Components/NutritionCard";
 import PerformanceChart from "../../Components/Charts/PerformanceChart";
+import ScoreChart from "../../Components/Charts/ScoreChart";
 
 function Profile({ useMockData }) {
   usePageTitle("Profil - SportSee");
@@ -64,7 +65,9 @@ function Profile({ useMockData }) {
             <div>
               <PerformanceChart data={data.performanceData} />
             </div>
-            <div className="bg-amber-500">Graph 4</div>
+            <div>
+              <ScoreChart score={data.userData.score} />
+            </div>
           </div>
           <div className="flex justify-between gap-7 xl:w-[258px] xl:flex-col">
             <NutritionCard
