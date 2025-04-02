@@ -11,17 +11,14 @@ function standardizeUserData(rawData) {
 }
 
 /**
- * Standardizes all API data by handling direct or nested data structures
- * (where data might be under a 'data' property)
- * @param {Object} data - The raw data object containing userData, activityData,...
- * @returns {Object} - Data with consistent structure
+ * Transforms and normalizes user data across both API and mock data sources
+ * @param {Object} data - Raw data from API or mock
+ * @returns {Object} - Clean data ready to use
  */
 function standardizeData(data) {
   return {
-    userData: standardizeUserData(data.userData.data || data.userData),
-    activityData: data.activityData.data || data.activityData,
-    averageSessionData: data.averageSessionData.data || data.averageSessionData,
-    performanceData: data.performanceData.data || data.performanceData,
+    userData: standardizeUserData(data.userData),
+    ...data,
   };
 }
 

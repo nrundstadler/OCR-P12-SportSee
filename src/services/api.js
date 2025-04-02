@@ -47,10 +47,10 @@ export const fetchDataApi = async (userId) => {
   }
 
   return {
-    userData,
-    activityData,
-    averageSessionData,
-    performanceData,
+    userData: userData.data,
+    activityData: activityData.data,
+    averageSessionData: averageSessionData.data,
+    performanceData: performanceData.data,
   };
 };
 
