@@ -78,7 +78,6 @@ const CustomTick = ({ payload, x, y, cx, cy }) => {
       dy={dy}
       fill="#FFF"
       textAnchor="middle"
-      verticalAnchor="middle"
       fontWeight={500}
     >
       {payload.value}
