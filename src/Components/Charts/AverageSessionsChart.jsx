@@ -67,56 +67,6 @@ const formatChartData = (data) => {
 };
 
 /**
- * Custom tooltip component for the chart
- * @param {object} props - Recharts tooltip props
- * @returns {JSX.Element|null} Tooltip component
- */
-const CustomTooltip = ({ payload, label }) => {
-  if (!label) return null;
-  return (
-    <div className="bg-white p-2 text-[0.6rem] font-medium">
-      <p>{`${payload?.[0]?.value} min`}</p>
-    </div>
-  );
-};
-
-/**
- * Custom dot appearing when hovering the line chart
- * @param {object} props - Recharts active dot props
- * @returns {JSX.Element|null}
- */
-const CustomActiveDot = ({ index, cx, cy }) => {
-  if (index === 0 || index === 8) {
-    return null;
-  }
-  return <circle cx={cx} cy={cy} r={5} fill="#fff" />;
-};
-
-/**
- * Custom cursor component that creates a dark overlay effect on the chart
- * Shows a semi-transparent black rectangle from cursor position to right edge
- * @param {Object} props - Component props
- * @param {Array<{x: number, y: number}>} props.points - Array containing cursor coordinates
- * @param {number} props.width - Total width of the chart area
- * @returns {JSX.Element|null} Rectangle overlay or null when cursor position x = 0
- */
-const CustomCursor = ({ points, width }) => {
-  const { x } = points[0];
-
-  if (x === 0) return null;
-  return (
-    <Rectangle
-      fill="#000000"
-      opacity={0.1}
-      x={x}
-      y={0}
-      width={width - x}
-      height={300}
-    />
-  );
-};
-
-/**
  * Line chart displaying average session durations throughout the week
  * @component
  * @param {object} props
@@ -125,6 +75,56 @@ const CustomCursor = ({ points, width }) => {
  */
 function AverageSessionsChart({ data }) {
   const formattedData = formatChartData(data);
+
+  /**
+   * Custom tooltip component for the chart
+   * @param {object} props - Recharts tooltip props
+   * @returns {JSX.Element|null} Tooltip component
+   */
+  const CustomTooltip = ({ payload, label }) => {
+    if (!label) return null;
+    return (
+      <div className="bg-white p-2 text-[0.6rem] font-medium">
+        <p>{`${payload?.[0]?.value} min`}</p>
+      </div>
+    );
+  };
+
+  /**
+   * Custom dot appearing when hovering the line chart
+   * @param {object} props - Recharts active dot props
+   * @returns {JSX.Element|null}
+   */
+  const CustomActiveDot = ({ index, cx, cy }) => {
+    if (index === 0 || index === 8) {
+      return null;
+    }
+    return <circle cx={cx} cy={cy} r={5} fill="#fff" />;
+  };
+
+  /**
+   * Custom cursor component that creates a dark overlay effect on the chart
+   * Shows a semi-transparent black rectangle from cursor position to right edge
+   * @param {Object} props - Component props
+   * @param {Array<{x: number, y: number}>} props.points - Array containing cursor coordinates
+   * @param {number} props.width - Total width of the chart area
+   * @returns {JSX.Element|null} Rectangle overlay or null when cursor position x = 0
+   */
+  const CustomCursor = ({ points, width }) => {
+    const { x } = points[0];
+
+    if (x === 0) return null;
+    return (
+      <Rectangle
+        fill="#000000"
+        opacity={0.1}
+        x={x}
+        y={0}
+        width={width - x}
+        height={300}
+      />
+    );
+  };
 
   return (
     <div className="bg-primary-dark h-full w-full rounded-md text-xs">

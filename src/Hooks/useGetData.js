@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { fetchDataApi, getMockData } from "../services/api";
-import standardizeData from "../services/standardizeData";
+import DataFormatter from "../services/DataFormatter";
 
 /**
  * Custom hook to retrieve and manage user data
@@ -23,13 +23,13 @@ export function useGetData(userId, useMockData) {
           throw new Error("No user ID provided.");
         }
 
-        const data = useMockData
+        const rawData = useMockData
           ? getMockData(userId)
           : await fetchDataApi(userId);
 
-        const normalizedData = standardizeData(data);
+        const formattedData = new DataFormatter(rawData);
 
-        setData(normalizedData);
+        setData(formattedData);
       } catch (error) {
         setHasError(true);
         console.error(error);

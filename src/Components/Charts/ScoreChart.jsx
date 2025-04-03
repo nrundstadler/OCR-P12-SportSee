@@ -11,10 +11,7 @@ import {
  * @param {number} props.score - Score value between 0 and 1
  * @returns {React.ReactElement} A radial chart showing score percentage
  */
-const ScoreChart = ({ score }) => {
-  // Convert score to percentage
-  const scorePercentage = score * 100;
-
+const ScoreChart = ({ scorePercentage }) => {
   const data = [
     {
       name: "Score",

@@ -47,7 +47,7 @@ function Profile({ useMockData }) {
           <h1 className="mb-8 text-5xl font-medium">
             Bonjour{" "}
             <span className="text-primary">
-              {data.userData.userInfos.firstName}
+              {data.userMainData.userInfos.firstName}
             </span>
           </h1>
           <p className="text-lg">
@@ -66,25 +66,25 @@ function Profile({ useMockData }) {
               <PerformanceChart data={data.performanceData} />
             </div>
             <div>
-              <ScoreChart score={data.userData.score} />
+              <ScoreChart scorePercentage={data.userMainData.scorePercentage} />
             </div>
           </div>
           <div className="flex justify-between gap-7 xl:w-[258px] xl:flex-col">
             <NutritionCard
               type="calorieCount"
-              value={data.userData.keyData.calorieCount}
+              value={data.userMainData.keyData.calorieCount}
             />
             <NutritionCard
               type="proteinCount"
-              value={data.userData.keyData.proteinCount}
+              value={data.userMainData.keyData.proteinCount}
             />
             <NutritionCard
               type="carbohydrateCount"
-              value={data.userData.keyData.carbohydrateCount}
+              value={data.userMainData.keyData.carbohydrateCount}
             />
             <NutritionCard
               type="lipidCount"
-              value={data.userData.keyData.lipidCount}
+              value={data.userMainData.keyData.lipidCount}
             />
           </div>
         </section>
