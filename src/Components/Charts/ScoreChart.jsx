@@ -44,7 +44,6 @@ const ScoreChart = ({ scorePercentage }) => {
             x="50%"
             y="44%"
             textAnchor="middle"
-            verticalAnchor="middle"
             className="fill-[#20253A] text-2xl font-bold"
           >
             {scorePercentage}%
@@ -53,7 +52,6 @@ const ScoreChart = ({ scorePercentage }) => {
             x="50%"
             y="54%"
             textAnchor="middle"
-            verticalAnchor="middle"
             className="fill-[#74798C] text-base font-medium"
           >
             de votre
@@ -62,7 +60,6 @@ const ScoreChart = ({ scorePercentage }) => {
             x="50%"
             y="62%"
             textAnchor="middle"
-            verticalAnchor="middle"
             className="fill-[#74798C] text-base font-medium"
           >
             objectif
