@@ -22,9 +22,7 @@ function DailyActivityChart({ data }) {
           <text
             x={30}
             y={30}
-            style={{
-              fontSize: "0.94rem",
-            }}
+            className="text-[0.94rem]"
             dominantBaseline="text-before-edge"
           >
             Activité quotidienne

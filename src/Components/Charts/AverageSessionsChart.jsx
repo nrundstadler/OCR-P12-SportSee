@@ -136,11 +136,7 @@ function AverageSessionsChart({ data }) {
           <text
             x={30}
             y={45}
-            style={{
-              fontSize: "0.94rem",
-              fill: "rgba(255, 255, 255, 0.6)",
-              fontWeight: 500,
-            }}
+            className="fill-white/60 text-[0.94rem] font-medium"
           >
             Durée moyenne des sessions
           </text>
