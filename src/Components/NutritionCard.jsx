@@ -3,34 +3,49 @@ import proteinIcon from "../assets/images/iconsNutrition/ProteinIcon.svg";
 import carbohydrateIcon from "../assets/images/iconsNutrition/CarbohydrateIcon.svg";
 import lipidIcon from "../assets/images/iconsNutrition/LipidIcon.svg";
 
-const NUTRITION_INFO = {
-  calorieCount: {
-    icon: calorieIcon,
-    bgColorIcon: "#fbeaea",
-    labelFR: "Calories",
-    unit: "kCal",
-  },
-  proteinCount: {
-    icon: proteinIcon,
-    bgColorIcon: "#e9f4fb",
-    labelFR: "Protéines",
-    unit: "g",
-  },
-  carbohydrateCount: {
-    icon: carbohydrateIcon,
-    bgColorIcon: "#faf6e5",
-    labelFR: "Glucides",
-    unit: "g",
-  },
-  lipidCount: {
-    icon: lipidIcon,
-    bgColorIcon: "#fbeaef",
-    labelFR: "Lipides",
-    unit: "g",
-  },
-};
-
+/**
+ * Component that displays a nutrition information card with an icon and value
+ * @component
+ * @param {Object} props - Component props
+ * @param {('calorieCount'|'proteinCount'|'carbohydrateCount'|'lipidCount')} props.type - Type of nutrition data to display
+ * @param {number} props.value - Value to display for the nutrition type
+ * @returns {JSX.Element|null} A card displaying nutrition information or null if type is invalid
+ *
+ * @example
+ * // Display calorie count
+ * <NutritionCard type="calorieCount" value={1800} />
+ *
+ * // Display protein count
+ * <NutritionCard type="proteinCount" value={155} />
+ */
 const NutritionCard = ({ type, value }) => {
+  const NUTRITION_INFO = {
+    calorieCount: {
+      icon: calorieIcon,
+      bgColorIcon: "#fbeaea",
+      labelFR: "Calories",
+      unit: "kCal",
+    },
+    proteinCount: {
+      icon: proteinIcon,
+      bgColorIcon: "#e9f4fb",
+      labelFR: "Protéines",
+      unit: "g",
+    },
+    carbohydrateCount: {
+      icon: carbohydrateIcon,
+      bgColorIcon: "#faf6e5",
+      labelFR: "Glucides",
+      unit: "g",
+    },
+    lipidCount: {
+      icon: lipidIcon,
+      bgColorIcon: "#fbeaef",
+      labelFR: "Lipides",
+      unit: "g",
+    },
+  };
+
   const info = NUTRITION_INFO[type];
 
   // Return null if type is not found in NUTRITION_INFO
