@@ -3,7 +3,6 @@ import {
   RadialBar,
   PolarAngleAxis,
   ResponsiveContainer,
-  Text,
 } from "recharts";
 
 /**
