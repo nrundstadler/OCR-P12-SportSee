@@ -1,6 +1,5 @@
 /**
  * Class responsible for formatting and standardizing raw user data
- * Handles data validation and provides default values for missing data
  */
 class DataFormatter {
   /**
