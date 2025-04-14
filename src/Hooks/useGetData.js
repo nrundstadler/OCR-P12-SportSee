@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { fetchDataApi, getMockData } from "../services/api";
+import ApiService from "../services/ApiService";
 import DataFormatter from "../services/DataFormatter";
 
 /**
@@ -24,8 +24,8 @@ export function useGetData(userId, useMockData) {
         }
 
         const rawData = useMockData
-          ? getMockData(userId)
-          : await fetchDataApi(userId);
+          ? ApiService.getMockData(userId)
+          : await ApiService.fetchDataApi(userId);
 
         const formattedData = new DataFormatter(rawData);
 
