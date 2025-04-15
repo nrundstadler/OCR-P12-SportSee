@@ -7,6 +7,7 @@ import {
 
 /**
  * Class responsible for handling API calls and mock data retrieval
+ * @exports {ApiService} A singleton instance of ApiService
  */
 class ApiService {
   constructor() {
