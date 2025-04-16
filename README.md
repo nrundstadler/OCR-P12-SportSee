@@ -2,6 +2,8 @@
 
 12ème projet de la formation "Développeur d'application JavaScript React" d'OpenClassrooms.
 
+![Dashboard SportSee](./docs/screenshot.jpg)
+
 ## Description
 
 SportSee est une application de dashboard analytics permettant aux utilisateurs de visualiser leurs données sportives. L'application communique avec une API pour récupérer les données des utilisateurs et les affiche notamment sous forme de différents graphiques grâce à la librairie Recharts.
