@@ -69,8 +69,8 @@ L'application propose deux modes de données :
 
 ## Utilisateurs disponibles
 
-- ID: 12 (Karl Dovineau)
-- ID: 18 (Cecilia Ratorez)
+- ID: 12 (Karl)
+- ID: 18 (Cecilia)
 
 ## Scripts disponibles
 
@@ -78,3 +78,88 @@ L'application propose deux modes de données :
 - `npm run build` : Compile l'application pour la production
 - `npm run lint` : Vérifie le code avec ESLint
 - `npm run preview` : Prévisualise la version de production
+
+<br><br>
+
+# English
+
+## Project 12: SportSee - Analytics Dashboard
+
+12th project of OpenClassrooms "JavaScript React Application Developer" training program.
+
+![Dashboard SportSee](./docs/screenshot.jpg)
+
+### Description
+
+SportSee is an analytics dashboard application that allows users to visualize their sports data. The application communicates with a API to fetch user data and displays it through various charts using the Recharts library.
+
+Users can track:
+
+- Daily activity (weight and calories)
+- Average session duration
+- Performance on different activities
+- Goal achievement score
+- Key metrics (calories, protein, carbs, lipids)
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/en/)
+- [Backend API SportSee](https://github.com/OpenClassrooms-Student-Center/SportSee)
+
+### Installation
+
+1. **Clone the project**
+
+```bash
+git clone https://github.com/nrundstadler/OCR-P12-SportSee
+cd OCR-P12-SportSee
+```
+
+2. **Install dependencies**
+
+```bash
+npm install
+```
+
+3. **Launch the application**
+
+```bash
+npm run dev
+```
+
+The application will be available at http://localhost:5173/ (or another port specified by Vite).
+
+### Architecture
+
+- `/src/components`: Reusable React components
+- `/src/services`: API and data formatting services
+- `/src/hooks`: React custom hooks
+- `/src/pages`: Application pages
+- `/src/data`: Mock data for development
+
+### Tech Stack
+
+- React 19: JavaScript library for building user interfaces
+- React Router: Navigation between pages
+- Recharts: React-based charting library built on D3.js
+- TailwindCSS: Utility-first CSS framework
+- Vite: Fast build tool for development
+
+### Data Modes
+
+The application offers two data modes:
+
+- Mock data: `/profile-mocked/:userId`
+- API data: `/profile/:userId` (requires running the [Backend](https://github.com/OpenClassrooms-Student-Center/SportSee))
+
+### Available Users
+
+- ID: 12 (Karl)
+- ID: 18 (Cecilia)
+
+### Available Scripts
+
+- `npm run dev`: Start development server
+- `npm run build`: Build application for production
+- `npm run lint`: Check code with ESLint
+- `npm run preview`: Preview production build
