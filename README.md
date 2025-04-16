@@ -17,7 +17,7 @@ SportSee est une application de dashboard analytics permettant aux utilisateurs 
 
 ```bash
 git clone https://github.com/nrundstadler/OCR-P12-SportSee
-cd projet-12/frontend
+cd OCR-P12-SportSee
 ```
 
 2. **Installer les dépendances**
