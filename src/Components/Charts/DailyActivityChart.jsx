@@ -65,8 +65,8 @@ function DailyActivityChart({ data }) {
             }}
             separator=""
             formatter={(value, name) => {
-              // extract the unit that is in the parenthesis
-              const unit = name.match(/\((.+)\)/)?.[1] || "";
+              // extract the unit that is in the parenthesis ("Poids (kg)" => "kg")
+              const unit = name.match(/\((.+)\)/)?.[1] ?? "";
               return [unit, value];
             }}
           />
