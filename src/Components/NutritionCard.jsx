@@ -1,7 +1,7 @@
-import calorieIcon from "../assets/images/iconsNutrition/CalorieIcon.svg";
-import proteinIcon from "../assets/images/iconsNutrition/ProteinIcon.svg";
-import carbohydrateIcon from "../assets/images/iconsNutrition/CarbohydrateIcon.svg";
-import lipidIcon from "../assets/images/iconsNutrition/LipidIcon.svg";
+import calorieIcon from "../assets/images/iconsNutrition/calorieIcon.svg";
+import proteinIcon from "../assets/images/iconsNutrition/proteinIcon.svg";
+import carbohydrateIcon from "../assets/images/iconsNutrition/carbohydrateIcon.svg";
+import lipidIcon from "../assets/images/iconsNutrition/lipidIcon.svg";
 
 /**
  * Component that displays a nutrition information card with an icon and value
